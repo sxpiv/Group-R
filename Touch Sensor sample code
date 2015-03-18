@@ -1,0 +1,24 @@
+/ Set touch sensor for NXT robot
+// 28/01/2014 - Lab 2
+
+ const tSensors touchSensor = (tSensors) S1;
+
+task main()
+{
+
+ nMotorPIDSpeedCtrl[motorA] = mtrSpeedReg;
+ nMotorPIDSpeedCtrl[motorB] = mtrSpeedReg;
+
+ while(SensorValue (touchSensor) == 0)
+ 	{
+   motor[motorA] = 100;
+ 	 motor[motorB] = 100;
+	}
+
+		motor[motorA] = -75;
+		motor[motorB]	= -75;
+		wait1Msec(1000);
+
+
+
+}
